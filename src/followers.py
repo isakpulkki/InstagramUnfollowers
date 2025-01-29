@@ -1,7 +1,7 @@
 class Followers:
     def __init__(self, followers: list, followees: list):
-        self.followers = [follower.username for follower in followers]
-        self.followed = [followee.username for followee in followees]
+        self.followers = [follower for follower in followers]
+        self.followed = [followee for followee in followees]
         self.not_followed = self.get_not_followed()
         self.unfollowers = self.get_unfollowers()
 
@@ -20,13 +20,12 @@ class Followers:
         ]
 
     def show_unfollowed(self):
-        print(
-            f'Found {len(self.unfollowers)} user(s) who don\'t follow you back: ')
-        for unfollower in self.unfollowers:
-            print(unfollower)
+        self.display_users(self.unfollowers, "user(s) who don't follow you back")
 
     def show_non_followers(self):
-        print(
-            f'Found {len(self.not_followed)} user(s) who you don\'t follow back: ')
-        for follower in self.not_followed:
-            print(follower)
+        self.display_users(self.not_followed, "user(s) who you don't follow back")
+
+    def display_users(self, users, message):
+        print(f'Found {len(users)} {message}:')
+        for user in users:
+            print(user)

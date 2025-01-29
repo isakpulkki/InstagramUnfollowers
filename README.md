@@ -1,8 +1,8 @@
 # InstagramUnfollowers
 
-This is a simple Python command-line application that enables you to identify Instagram users who have unfollowed you and users you don't follow back. 
+This is a simple Python command-line application that allows you to identify Instagram users who have unfollowed you and users you don’t follow back. Logging in is required in the application.
 
-The application utilizes the [InstaLoader](https://instaloader.github.io/) API to establish communication with Instagram's platform. It's important to note that the current version of InstaLoader does not support 2FA, therefore in order to use this application it is necessary to disable 2FA authentication on your Instagram account.
+The application uses the [Instagrapi](https://subzeroid.github.io/instagrapi) library to interact with Instagram’s platform. Two-Factor Authentication (2FA) is  supported.
 
 ## Instructions
 
